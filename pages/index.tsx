@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 const HomePage = () => {
   return (
-    <Title>Hola Next.js</Title>
+    <Title>
+      Hola Next.js
+    </Title>
   );
 }
 

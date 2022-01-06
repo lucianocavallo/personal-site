@@ -6,8 +6,10 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   background: lightgray;
+  padding: 0 10px;
   & a {
     text-decoration: none;
     color: black;
+    margin: 15px;
   }
 `
