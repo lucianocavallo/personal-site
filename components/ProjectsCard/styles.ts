@@ -3,6 +3,8 @@ import { BLUE } from "../../styles/vars";
 
 export const Container = styled.div`
   position: relative;
+  /* padding: 20px; */
+  /* border: 1px solid black; */
   & h4 {
     text-align: center;
     font-size: 25px;
@@ -26,5 +28,12 @@ export const Container = styled.div`
     border-radius: 20px;
     margin-right: 20px;
     text-decoration: none;
+  }
+  & span {
+    display: flex;
+    align-items: center;
+  }
+  & span p {
+    margin-right: 4px;
   }
 `

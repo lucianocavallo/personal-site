@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Header from "@/components/Header";
 import Projects from "@/components/Projects";
 import MySkills from "@/components/MySkills";
+import Footer from "@/components/Footer";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Hero />
       <MySkills />
       <Projects />
+      <Footer />
     </Main>
   );
 }

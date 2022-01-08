@@ -11,6 +11,8 @@ import npmImg from "@/images/techs/npm.svg";
 import sassImg from "@/images/techs/sass.svg";
 import styledImg from "@/images/techs/styled.svg";
 import webpackImg from "@/images/techs/webpack.svg";
+import typescriptImg from "@/images/techs/typescript.svg";
+import { type } from "os";
 
 const MySkills = () => {
   return (
@@ -24,7 +26,9 @@ const MySkills = () => {
             <Image
             src={htmlImg}
             alt="html"
-            layout="responsive"
+            width={45}
+            height={50}
+            // layout="responsive"
             />
           </figure>
           <p>HTML-5</p>
@@ -34,7 +38,9 @@ const MySkills = () => {
             <Image
             src={cssImg}
             alt="css"
-            layout="responsive"
+            width={45}
+            height={50}
+            // layout="responsive"
             />
           </figure>
           <p>CSS-3</p>
@@ -44,7 +50,9 @@ const MySkills = () => {
             <Image
             src={javascriptImg}
             alt="javascript"
-            layout="responsive"
+            width={46}
+            height={46}
+            // layout="responsive"
             />
           </figure>
           <p>JavaScript</p>
@@ -72,6 +80,17 @@ const MySkills = () => {
         <li>
           <figure>
             <Image
+            src={typescriptImg}
+            alt="Typescript"
+            width={45}
+            height={45}
+            />
+          </figure>
+          <p>Typescript</p>
+        </li>
+        <li>
+          <figure>
+            <Image
             src={sassImg}
             alt="Sass"
             layout="responsive"
@@ -79,7 +98,7 @@ const MySkills = () => {
           </figure>
           <p>Sass</p>
         </li>
-        <li>
+        <li className="styled-components">
           <figure>
             <Image
             src={styledImg}
@@ -87,7 +106,7 @@ const MySkills = () => {
             layout="responsive"
             />
           </figure>
-          <p className="styled-components">Styled Components</p>
+          <p>Styled Components</p>
         </li>
         <li>
           <figure>
@@ -114,10 +133,21 @@ const MySkills = () => {
             <Image
             src={webpackImg}
             alt="Webpack"
-            layout="responsive"
+            width={80}
+            height={80}
             />
           </figure>
           <p>Webpack</p>
+        </li>
+        <li className="npm">
+          <figure>
+            <Image
+            src={npmImg}
+            alt="NPM"
+            layout="responsive"
+            />
+          </figure>
+          <p>NPM</p>
         </li>
 
       </Grid>

@@ -8,7 +8,11 @@ const ProjectsCard = ({ title, url, image, description}) => {
     <Container>
       <h4>{title}</h4>
       <div>
-        <Image src={image} alt={title} layout="responsive" />
+        <Image
+          src={image}
+          alt={title}
+          layout="responsive"
+        />
       </div>
       <p>{description}</p>
       <div>
@@ -19,7 +23,7 @@ const ProjectsCard = ({ title, url, image, description}) => {
         </Link>
         <Link href={url} passHref>
           <span>
-            Ver C&oacute;digo
+            <p>Ver C&oacute;digo</p>
             <Image src={github} alt="github icon" width={32} />
           </span>
         </Link>

@@ -1,10 +1,13 @@
 import React from "react";
+import { Container } from "./styles";
 
 const Footer = () => {
   return (
-    <div>
-      Footer
-    </div>
+    <Container>
+      <p>
+      lucianocavallo © 2022. Todos los derechos reservados.
+      </p>
+    </Container>
   );
 }
 
