@@ -47,8 +47,7 @@ export const Section = styled.section`
     width: 70%;
   }
   @media (max-width: 800px) {
-    height: 160px;
-
+    height: 100%;
     & h2 {
       font-size: 25px;
     }
