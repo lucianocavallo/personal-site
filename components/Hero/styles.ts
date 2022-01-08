@@ -22,6 +22,7 @@ export const Div = styled.div`
 
   & h2 {
     color: BLUE;
+    margin-bottom: 5px;
   }
 
   @media (max-width: 800px) {
@@ -29,6 +30,9 @@ export const Div = styled.div`
     width: 80%;
     margin: 0 auto;
     margin-top: 30px;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
   }
 `
 
