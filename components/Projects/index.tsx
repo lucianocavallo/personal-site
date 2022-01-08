@@ -1,6 +1,7 @@
 import { Container, Grid, MyProjects } from "./styles";
 import simon from "@/images/mini-simon-says.png";
 import weather from "@/images/mini-weather-app.png";
+import petgram from "@/images/mini-petgram.png";
 
 import ProjectsCard from "../ProjectsCard";
 
@@ -32,6 +33,12 @@ export default Projects;
 
 
 const projects = [
+  {
+    title: 'Petgram',
+    url: 'https://petgram-lucianocavallo.vercel.app/',
+    image: petgram,
+    description: 'Aplicacion que emula a Instagram pero de mascotas. 🐶'
+  },
   {
     title: 'Weather App',
     url: 'https://weather-app-luchx88.netlify.app/',
