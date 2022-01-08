@@ -1,18 +1,31 @@
 import React from "react";
 import Link from "next/link";
 
-import { Nav } from "./styles";
+import { Nav, Section } from "./styles";
 
 const Header = () => {
   return (
-    <Nav>
-      <Link href="/">
-        Home
-      </Link>
-      <Link href="/about">
-        About
-      </Link>
-    </Nav>
+    <>
+      <Nav>
+        <ul>
+          <li>
+            <Link href="/">
+              @lucianocavallo8
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects">
+              Descargar CV
+            </Link>
+          </li>
+        </ul>
+      </Nav>
+      <Section>
+        <h2>Luciano Cavallo</h2>
+        <h3>Frontend Developer</h3>
+        <p>Me apasiona la tecnolog&iacute;a, el c&oacute;digo, y me motivan los proyectos desafiantes.</p>
+      </Section>
+    </>
   );
 }
 
