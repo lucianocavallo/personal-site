@@ -9,7 +9,7 @@ const mySkillsFadeIn = keyframes`
 
 export const Container = styled.div`
   opacity: 0;
-  animation: ${mySkillsFadeIn} 1s 2.2s ease-in-out forwards;
+  animation: ${mySkillsFadeIn} 1s 1.5s ease-in-out forwards;
   transform-origin: top;
   /* border-width: 2px;
   border-style: solid; */

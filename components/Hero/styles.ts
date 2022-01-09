@@ -5,13 +5,13 @@ import { BLUE, LIGHT_BLUE, TURQUOISE } from "../../styles/vars";
 import { keyframes } from "styled-components";
 
 const heroMoveIn = keyframes`
-0% { transform: translateX(120%); }
-100% { transform: translateX(0); }
+0% { opacity: 0; }
+100% { opacity: 1; }
 `
 
 export const HeroContainer = styled.div`
-  transform: translateX(120%);
-  animation: ${heroMoveIn} 2s 0.5s ease-in-out forwards;
+  opacity: 0;
+  animation: ${heroMoveIn} 1s 1s ease-in-out forwards;
 
   display: flex;
   padding: 30px 50px 45px;
