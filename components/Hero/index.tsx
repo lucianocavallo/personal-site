@@ -1,11 +1,12 @@
-import luciano from "../../public/images/luciano.png";
+import luciano from "@/images/luciano.png";
 import { Figure, StyledImage, Div, HeroContainer, Socials } from "./styles";
 import Image from "next/image";
+import Link from "next/link";
 
-import github from "@/images/github.svg";
-import instagram from "@/images/instagram.svg";
-import twitter from "@/images/twitter.svg";
-import linkedin from "@/images/linkedin.svg";
+import github from "@/images/socials/github.svg";
+import instagram from "@/images/socials/instagram.svg";
+import twitter from "@/images/socials/twitter.svg";
+import linkedin from "@/images/socials/linkedin.svg";
 
 const Hero = () => {
   return (
@@ -19,10 +20,18 @@ const Hero = () => {
           <p>Mis redes sociales</p>
           <ul>
             <li>
-              <Image src={github} alt="github" width={35} height={35} />
+              <Link href="https://github.com/lucianocavallo" passHref>
+                <a>
+                  <Image src={github} alt="github" width={35} height={35} />
+                </a>
+              </Link>
             </li>
             <li>
-              <Image src={twitter} alt="twitter" width={35} height={35} />
+            <Link href="https://twitter.com/lucianocavallo8" passHref>
+              <a>
+                <Image src={twitter} alt="twitter" width={35} height={35} />
+              </a>
+            </Link>
             </li>
             <li>
               <Image src={linkedin} alt="linkedin" width={35} height={35} />

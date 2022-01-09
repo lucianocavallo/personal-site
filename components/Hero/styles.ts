@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import { BLUE } from "../../styles/vars";
+import { BLUE, LIGHT_BLUE, TURQUOISE } from "../../styles/vars";
 
 export const HeroContainer = styled.div`
   display: flex;
@@ -58,7 +58,11 @@ export const Figure = styled.figure`
   height: 230px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: ${BLUE};
+  /* background-color: ${LIGHT_BLUE}; */
+  /* background: radial-gradient(${BLUE}, ${TURQUOISE}, ${TURQUOISE}); */
+  background: radial-gradient(${TURQUOISE}, ${BLUE});
+  /* background: linear-gradient(to right, ${BLUE}, ${TURQUOISE}); */
+  /* background-image: radial-gradient(circle, #0066ff, #009aff, #00c1ff, #00e3fc, #00ffe0); */
   margin: 0 auto;
   flex-grow: 1;
 `

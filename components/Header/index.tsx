@@ -14,7 +14,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/projects">
+            <Link href="/">
               Descargar CV
             </Link>
           </li>

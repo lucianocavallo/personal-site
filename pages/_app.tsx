@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>My Next.js Project</title>
+        <title>luciano cavallo</title>
       </Head>
       <GlobalStyle />
       <Component {...pageProps} />

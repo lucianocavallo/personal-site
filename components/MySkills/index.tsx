@@ -12,7 +12,7 @@ import sassImg from "@/images/techs/sass.svg";
 import styledImg from "@/images/techs/styled.svg";
 import webpackImg from "@/images/techs/webpack.svg";
 import typescriptImg from "@/images/techs/typescript.svg";
-import { type } from "os";
+import vuejsImg from "@/images/techs/vuejs.svg";
 
 const MySkills = () => {
   return (
@@ -76,6 +76,16 @@ const MySkills = () => {
             />
           </figure>
           <p>Next.js</p>
+        </li>
+        <li>
+          <figure>
+            <Image
+            src={vuejsImg}
+            alt="Vue.js"
+            layout="responsive"
+            />
+          </figure>
+          <p>Vue.js</p>
         </li>
         <li>
           <figure>

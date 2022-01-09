@@ -7,6 +7,7 @@ export const Container = styled.div`
   width: 320px;
   height: 380px;
   padding: 10px;
+  border-radius: 8px;
 
   /* padding: 20px; */
   /* border: 1px solid black; */
@@ -38,7 +39,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
   }
-  & span p {
+  & a span p {
     margin-right: 4px;
+    color: black;
+  }
+  & a {
+    text-decoration: none;
   }
 `
