@@ -1,7 +1,16 @@
 import styled from "styled-components";
 import { BLUE, TURQUOISE } from "../../styles/vars";
+import { keyframes } from "styled-components";
+
+const mySkillsFadeIn = keyframes`
+0% { transform: scaleY(0); opacity: 0; }
+100% { transform: scaleY(1); opacity: 1; }
+`
 
 export const Container = styled.div`
+  opacity: 0;
+  animation: ${mySkillsFadeIn} 1s 2.2s ease-in-out forwards;
+  transform-origin: top;
   /* border-width: 2px;
   border-style: solid; */
   /* border-color: TURQUOISE; */

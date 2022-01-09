@@ -1,5 +1,11 @@
 import luciano from "@/images/luciano.png";
-import { Figure, StyledImage, Div, HeroContainer, Socials } from "./styles";
+import {
+  Figure,
+  StyledImage,
+  Div,
+  HeroContainer,
+  Socials
+} from "./styles";
 import Image from "next/image";
 import Link from "next/link";
 

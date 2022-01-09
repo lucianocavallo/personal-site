@@ -2,9 +2,19 @@ import styled from "styled-components";
 import Image from "next/image";
 import { BLUE, LIGHT_BLUE, TURQUOISE } from "../../styles/vars";
 
+import { keyframes } from "styled-components";
+
+const heroMoveIn = keyframes`
+0% { transform: translateX(120%); }
+100% { transform: translateX(0); }
+`
+
 export const HeroContainer = styled.div`
+  transform: translateX(120%);
+  animation: ${heroMoveIn} 2s 0.5s ease-in-out forwards;
+
   display: flex;
-  padding: 30px 50px;
+  padding: 30px 50px 45px;
   margin-top: 30px;
   align-items: center;
 
