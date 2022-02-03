@@ -17,7 +17,9 @@ const MySkills = () => {
   return (
     <Container>
       <SkillsDiv>
-        <h3>My Skills</h3>
+        <div>
+          <h3>My Skills</h3>
+        </div>
       </SkillsDiv>
       <Grid>
         <li>

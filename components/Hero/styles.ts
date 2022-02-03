@@ -7,7 +7,7 @@ import { keyframes } from "styled-components";
 const heroMoveIn = keyframes`
 0% { opacity: 0; }
 100% { opacity: 1; }
-`
+`;
 
 export const HeroContainer = styled.div`
   opacity: 0;
@@ -22,13 +22,17 @@ export const HeroContainer = styled.div`
     flex-direction: column-reverse;
     align-items: center;
   }
-`
+`;
 
 export const Div = styled.div`
   width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  & > p {
+    line-height: 22px;
+  }
 
   & h2 {
     color: BLUE;
@@ -44,7 +48,7 @@ export const Div = styled.div`
   @media (max-width: 600px) {
     width: 100%;
   }
-`
+`;
 
 export const Socials = styled.div`
   margin-top: 30px;
@@ -56,9 +60,9 @@ export const Socials = styled.div`
     display: flex;
   }
   & ul li {
-    padding: 5px;
+    padding: 10px;
   }
-`
+`;
 
 export const Figure = styled.figure`
   align-self: flex-start;
@@ -75,8 +79,9 @@ export const Figure = styled.figure`
   /* background-image: radial-gradient(circle, #0066ff, #009aff, #00c1ff, #00e3fc, #00ffe0); */
   margin: 0 auto;
   flex-grow: 1;
-`
+  box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);
+`;
 
 export const StyledImage = styled(Image)`
   object-fit: cover;
-`
+`;

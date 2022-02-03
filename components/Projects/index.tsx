@@ -10,7 +10,9 @@ const Projects = () => {
   return (
     <Container>
       <MyProjects>
-        <h3>Mis Proyectos</h3>
+        <div>
+          <h3>Mis Proyectos</h3>
+        </div>
       </MyProjects>
       <Grid>
         {projects.map((project) => (
