@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
-import { Nav, Section } from "./styles";
+import { Nav, Section, Container } from "./styles";
 
 const Header = () => {
   return (
-    <>
+    <Container>
       <Nav>
         <ul>
           <li>
@@ -25,7 +25,7 @@ const Header = () => {
         <h3>Frontend Developer</h3>
         <p>Me apasiona la tecnolog&iacute;a, el c&oacute;digo, y me motivan los proyectos desafiantes.</p>
       </Section>
-    </>
+    </Container>
   );
 }
 

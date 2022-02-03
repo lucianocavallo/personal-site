@@ -11,7 +11,7 @@ const heroMoveIn = keyframes`
 
 export const HeroContainer = styled.div`
   opacity: 0;
-  animation: ${heroMoveIn} 1s 1s ease-in-out forwards;
+  animation: ${heroMoveIn} 1s 1.5s ease-in-out forwards;
 
   display: flex;
   padding: 30px 50px 45px;

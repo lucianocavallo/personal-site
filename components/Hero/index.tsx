@@ -1,11 +1,5 @@
 import luciano from "@/images/luciano.png";
-import {
-  Figure,
-  StyledImage,
-  Div,
-  HeroContainer,
-  Socials
-} from "./styles";
+import { Figure, StyledImage, Div, HeroContainer, Socials } from "./styles";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +14,13 @@ const Hero = () => {
       <div>
         <Div>
           <h2>¡Hola Mundo!</h2>
-          <p>Llevo varios meses estudiando en la carrera de Desarrollador Web en Platzi. dedicandome full-time a aprender las tecnologías de HTML5, CSS3, y JavaScript. Actualmente estoy especializándome en la librería React.js y su framework Next.js, para construir sitios geniales.</p>
+          <p>
+            Llevo varios meses estudiando en la carrera de Desarrollador Web en
+            Platzi. dedicandome full-time a aprender las tecnologías de HTML5,
+            CSS3, y JavaScript. Actualmente estoy especializándome en la
+            librería React.js y su framework Next.js, para construir sitios
+            geniales.
+          </p>
         </Div>
         <Socials>
           <p>Mis redes sociales</p>
@@ -33,17 +33,33 @@ const Hero = () => {
               </Link>
             </li>
             <li>
-            <Link href="https://twitter.com/lucianocavallo8" passHref>
-              <a>
-                <Image src={twitter} alt="twitter" width={35} height={35} />
-              </a>
-            </Link>
+              <Link href="https://twitter.com/lucianocavallo8" passHref>
+                <a>
+                  <Image src={twitter} alt="twitter" width={35} height={35} />
+                </a>
+              </Link>
             </li>
             <li>
-              <Image src={linkedin} alt="linkedin" width={35} height={35} />
+              <Link
+                href="https://www.linkedin.com/in/luciano-cavallo-7679b9225/"
+                passHref
+              >
+                <a>
+                  <Image src={linkedin} alt="linkedin" width={35} height={35} />
+                </a>
+              </Link>
             </li>
             <li>
-              <Image src={instagram} alt="instagram" width={35} height={35} />
+              <Link href="https://www.instagram.com/lucianocavallo10/" passHref>
+                <a>
+                  <Image
+                    src={instagram}
+                    alt="instagram"
+                    width={35}
+                    height={35}
+                  />
+                </a>
+              </Link>
             </li>
           </ul>
         </Socials>
@@ -59,6 +75,6 @@ const Hero = () => {
       </Figure>
     </HeroContainer>
   );
-}
+};
 
 export default Hero;

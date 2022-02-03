@@ -3,15 +3,18 @@ import { BLUE } from "../../styles/vars";
 
 import { keyframes } from "styled-components";
 
-const navMoveIn = keyframes`
-0% { transform: translateY(-100%); }
+const moveIn = keyframes`
+0% { transform: translateY(-110%); }
 100% { transform: translateY(0px); }
 `
 
+export const Container = styled.div`
+  transform: translateY(-110%);
+  animation: ${moveIn} 1.5s 0.2s ease-in-out forwards;
+`
+
 export const Nav = styled.nav`
-  transform: translateY(-100%);
   height: 80px;
-  animation: ${navMoveIn} 1s 0.6s ease-in-out forwards;
   & a {
     text-decoration: none;
     color: black;
@@ -35,14 +38,7 @@ export const Nav = styled.nav`
   }
 `
 
-const sectionMoveIn = keyframes`
-0% { transform: translateY(-150%); }
-100% { transform: translateY(0px); }
-`
-
 export const Section = styled.section`
-  transform: translateY(-150%);
-  animation: ${sectionMoveIn} 1.5s ease-in-out forwards;
   padding: 30px 20px;
   border-radius: 40px;
   width: 100%;
