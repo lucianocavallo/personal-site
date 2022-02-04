@@ -18,7 +18,6 @@ export const Nav = styled.nav`
   height: 80px;
   & a {
     text-decoration: none;
-    color: black;
     margin: 15px;
     color: ${vars.BLUE};
     font-weight: bold;
@@ -32,8 +31,10 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
   }
-  & ul li:nth-child(2) a {
-    padding: 5px 10px;
+  & ul li:nth-child(1) p {
+    margin: 15px;
+    color: ${vars.BLUE};
+    font-weight: bold;
   }
 `;
 
@@ -41,27 +42,25 @@ export const Li = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  & button {
-    border: none;
-    cursor: pointer;
-    background: transparent;
-  }
 `;
 
-export const ThemedButton = styled.button<ComponentProps>`
-  color: ${(props) => (props.themed ? "white" : "black")};
+export const ThemeButton = styled.button<ComponentProps>`
+  color: ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
+  margin-right: 5px;
+  font-weight: bold;
 `;
 
 export const CVButton = styled.button<ComponentProps>`
-  color: ${(props) => (props.themed ? "white" : "black")};
   margin: 15px;
-  color: ${vars.BLUE};
+  color: ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
   font-weight: bold;
-  border: 2px solid ${vars.BLUE};
+  border: 2px solid ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
   border-radius: 30px;
+  padding: 5px;
+  font-size: 14px;
 `;
 
-export const Section = styled.section`
+export const Section = styled.section<ComponentProps>`
   padding: 30px 20px;
   border-radius: 40px;
   width: 100%;
@@ -74,7 +73,10 @@ export const Section = styled.section`
   color: white;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);
+  ${(props) =>
+    props.themed
+      ? "box-shadow: 0px 2px 12px 2px rgba(255, 255, 255, .5);"
+      : "box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);"};
   & h2 {
     font-size: 35px;
   }

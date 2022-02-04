@@ -18,10 +18,10 @@ import typescriptImg from "@/images/techs/typescript.svg";
 import { Container, Grid, SkillsDiv } from "./styles";
 
 const MySkills = () => {
-  const { lang } = useContext(Context);
+  const { lang, themed } = useContext(Context);
   return (
     <Container>
-      <SkillsDiv>
+      <SkillsDiv themed={themed}>
         <div>
           <h3>{lang === "es" ? "Mis habilidades" : "My skills"}</h3>
         </div>

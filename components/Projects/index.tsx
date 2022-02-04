@@ -11,10 +11,10 @@ import freeMarket from "@/images/projects/free-market.png";
 import { Container, Grid, MyProjects } from "./styles";
 
 const Projects = () => {
-  const { lang } = useContext(Context);
+  const { lang, themed } = useContext(Context);
   return (
     <Container>
-      <MyProjects>
+      <MyProjects themed={themed}>
         <div>
           <h3>{lang === "es" ? "Mis Proyectos" : "My Projects"}</h3>
         </div>
@@ -30,6 +30,7 @@ const Projects = () => {
                 description={project.description}
                 key={project.title}
                 lang={lang}
+                themed={themed}
               />
             ))
           : projectsEn.map((project) => (
@@ -41,6 +42,7 @@ const Projects = () => {
                 description={project.description}
                 key={project.title}
                 lang={lang}
+                themed={themed}
               />
             ))}
       </Grid>

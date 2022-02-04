@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
-import { BLUE, LIGHT_BLUE, TURQUOISE } from "../../styles/vars";
+import { BLUE, TURQUOISE } from "../../styles/vars";
+import * as vars from "../../styles/vars";
 
 import { keyframes } from "styled-components";
 
@@ -24,7 +25,7 @@ export const HeroContainer = styled.div`
   }
 `;
 
-export const Div = styled.div`
+export const Div = styled.div<ComponentProps>`
   width: 85%;
   display: flex;
   flex-direction: column;
@@ -32,10 +33,11 @@ export const Div = styled.div`
 
   & > p {
     line-height: 22px;
+    color: ${(props) => (props.themed ? "white" : "black")};
   }
 
   & h2 {
-    color: BLUE;
+    color: ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
     margin-bottom: 5px;
   }
 
@@ -50,17 +52,25 @@ export const Div = styled.div`
   }
 `;
 
-export const Socials = styled.div`
+export const Socials = styled.div<ComponentProps>`
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  & p {
+    color: ${(props) => (props.themed ? "white" : "black")};
+  }
   & ul {
     list-style: none;
     display: flex;
   }
   & ul li {
-    padding: 10px;
+    margin: 10px;
+    padding: 5px;
+    background: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
   }
 `;
 
@@ -72,11 +82,7 @@ export const Figure = styled.figure`
   height: 230px;
   border-radius: 50%;
   overflow: hidden;
-  /* background-color: ${LIGHT_BLUE}; */
-  /* background: radial-gradient(${BLUE}, ${TURQUOISE}, ${TURQUOISE}); */
   background: radial-gradient(${TURQUOISE}, ${BLUE});
-  /* background: linear-gradient(to right, ${BLUE}, ${TURQUOISE}); */
-  /* background-image: radial-gradient(circle, #0066ff, #009aff, #00c1ff, #00e3fc, #00ffe0); */
   margin: 0 auto;
   flex-grow: 1;
   box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);

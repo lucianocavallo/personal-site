@@ -5,7 +5,7 @@ import spain from "../../public/images/flags/spain_flag_icon.png";
 import usa from "../../public/images/flags/usa_flag_icon.png";
 import { Context } from "context/context";
 
-import { Nav, Section, Container, Li, ThemedButton, CVButton } from "./styles";
+import { Nav, Section, Container, Li, ThemeButton, CVButton } from "./styles";
 
 const Header = () => {
   const { lang, toggleLang, themed, toggleThemed } = useContext(Context);
@@ -19,12 +19,12 @@ const Header = () => {
       <Nav>
         <ul>
           <li>
-            <Link href="/">@lucianocavallo8</Link>
+            <p>@lucianocavallo8</p>
           </li>
           <Li>
-            <ThemedButton themed={themed} onClick={handleToggleThemed}>
+            <ThemeButton themed={themed} onClick={handleToggleThemed}>
               Theme
-            </ThemedButton>
+            </ThemeButton>
             <button onClick={handleToggleLang}>
               <Image
                 src={lang === "es" ? usa : spain}
@@ -39,7 +39,7 @@ const Header = () => {
           </Li>
         </ul>
       </Nav>
-      <Section>
+      <Section themed={themed}>
         <h2>Luciano Cavallo</h2>
         <h3>Frontend Developer</h3>
         <p>

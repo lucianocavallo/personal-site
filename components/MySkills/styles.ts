@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BLUE, TURQUOISE } from "../../styles/vars";
 import { keyframes } from "styled-components";
 
 const mySkillsFadeIn = keyframes`
@@ -63,8 +62,11 @@ export const Grid = styled.ul`
   }
 `;
 
-export const SkillsDiv = styled.div`
-  filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.3));
+export const SkillsDiv = styled.div<ComponentProps>`
+  ${(props) =>
+    props.themed
+      ? "filter: drop-shadow(0px 2px 12px rgba(255, 255, 255, 0.5))"
+      : "filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.3))"};
   & > div {
     width: 100%;
     height: 80px;

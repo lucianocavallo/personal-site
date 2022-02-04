@@ -3,9 +3,17 @@ import { Container } from "./styles";
 import github from "@/images/socials/github.svg";
 import Link from "next/link";
 
-const ProjectsCard = ({ title, url, githubLink, image, description, lang }) => {
+const ProjectsCard = ({
+  title,
+  url,
+  githubLink,
+  image,
+  description,
+  lang,
+  themed,
+}) => {
   return (
-    <Container>
+    <Container themed={themed}>
       <h4>{title}</h4>
       <div>
         <Image src={image} alt={title} layout="responsive" />

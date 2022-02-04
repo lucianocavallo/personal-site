@@ -12,12 +12,12 @@ import linkedin from "@/images/socials/linkedin.svg";
 import { Figure, StyledImage, Div, HeroContainer, Socials } from "./styles";
 
 const Hero = () => {
-  const { lang } = useContext(Context);
+  const { lang, themed } = useContext(Context);
 
   return (
     <HeroContainer>
       <div>
-        <Div>
+        <Div themed={themed}>
           <h2>{lang === "es" ? "¡Hola Mundo!" : "Hello World!"}</h2>
           <p>
             {lang === "es"
@@ -25,7 +25,7 @@ const Hero = () => {
               : "I've been stufying for several months the Web Developer career in Platzi. Devoting myself full time to learn technologies as HTML5, CSS3, JavaScript and React.js. Actually I'm specializing in React.js library, and it's framework Next.js, to build awesomes websites"}
           </p>
         </Div>
-        <Socials>
+        <Socials themed={themed}>
           <p>{lang === "es" ? "Mis redes sociales" : "My social networks"}</p>
           <ul>
             <li>

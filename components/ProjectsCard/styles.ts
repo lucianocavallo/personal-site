@@ -1,20 +1,24 @@
 import styled from "styled-components";
 import { BLUE } from "../../styles/vars";
+import * as vars from "../../styles/vars";
 
-export const Container = styled.div`
+export const Container = styled.div<ComponentProps>`
   position: relative;
-  box-shadow: 0 0 8px 4px rgba(0,102,255,.05);
+  ${(props) =>
+    props.themed
+      ? "box-shadow: 0 0 12px 0px rgba(255, 255, 255, .6)"
+      : "box-shadow: 0 0 12px 8px rgba(0, 50, 255, 0.15)"};
   width: 320px;
-  height: 380px;
-  padding: 10px;
+  padding: 10px 10px 15px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  /* padding: 20px; */
-  /* border: 1px solid black; */
   & h4 {
     text-align: center;
     font-size: 25px;
-    color: BLUE;
+    color: ${(props) => (props.themed ? vars.BLUE : vars.BLUE)};
     margin-bottom: 5px;
   }
   & div:nth-child(2) {
@@ -28,22 +32,31 @@ export const Container = styled.div`
     align-items: center;
   }
   & .project-link {
-    color: BLUE;
-    border: 1px solid BLUE;
-    padding: 5px;
+    border: 1px solid ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
+    padding: 7px 7px;
     border-radius: 20px;
     margin-right: 20px;
     text-decoration: none;
+    color: ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
+  }
+  & > p {
+    color: ${(props) => (props.themed ? "white" : "black")};
   }
   & span {
     display: flex;
     align-items: center;
+    border-radius: 30px;
+    padding: 1px 5px;
   }
   & a span p {
-    margin-right: 4px;
     color: black;
+    /* color: ${(props) => (props.themed ? "white" : "black")}; */
+    margin-right: 4px;
+  }
+  & a span {
+    background: ${(props) => (props.themed ? vars.LIGHT_BLUE : "transparent")};
   }
   & a {
     text-decoration: none;
   }
-`
+`;

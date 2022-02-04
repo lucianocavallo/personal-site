@@ -6,8 +6,12 @@ export const Container = styled.div`
   place-items: center;
 `;
 
-export const MyProjects = styled.div`
-  filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.3));
+export const MyProjects = styled.div<ComponentProps>`
+  ${(props) =>
+    props.themed
+      ? "filter: drop-shadow(0px 2px 12px rgba(255, 255, 255, 0.5))"
+      : "filter: drop-shadow(0px 2px 12px rgba(0, 0, 0, 0.3))"};
+
   width: 100%;
   & div {
     width: 100%;
