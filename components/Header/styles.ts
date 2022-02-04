@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { BLUE } from "../../styles/vars";
+import * as vars from "../../styles/vars";
+import Link from "next/link";
 
 import { keyframes } from "styled-components";
 
@@ -19,7 +20,7 @@ export const Nav = styled.nav`
     text-decoration: none;
     color: black;
     margin: 15px;
-    color: ${BLUE};
+    color: ${vars.BLUE};
     font-weight: bold;
   }
   & ul {
@@ -32,9 +33,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
   }
   & ul li:nth-child(2) a {
-    border: 2px solid ${BLUE};
     padding: 5px 10px;
-    border-radius: 30px;
   }
 `;
 
@@ -44,7 +43,22 @@ export const Li = styled.li`
   justify-content: center;
   & button {
     border: none;
+    cursor: pointer;
+    background: transparent;
   }
+`;
+
+export const ThemedButton = styled.button<ComponentProps>`
+  color: ${(props) => (props.themed ? "white" : "black")};
+`;
+
+export const CVButton = styled.button<ComponentProps>`
+  color: ${(props) => (props.themed ? "white" : "black")};
+  margin: 15px;
+  color: ${vars.BLUE};
+  font-weight: bold;
+  border: 2px solid ${vars.BLUE};
+  border-radius: 30px;
 `;
 
 export const Section = styled.section`
@@ -52,7 +66,11 @@ export const Section = styled.section`
   border-radius: 40px;
   width: 100%;
   height: 200px;
-  background: linear-gradient(90deg, #0066ff 21.51%, #00ffe0 97.27%);
+  background: linear-gradient(
+    90deg,
+    ${vars.BLUE} 21.51%,
+    ${vars.TURQUOISE} 97.27%
+  );
   color: white;
   display: flex;
   flex-direction: column;

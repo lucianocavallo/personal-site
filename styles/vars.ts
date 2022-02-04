@@ -1,3 +1,6 @@
-export const BLUE = '#0066FF';
-export const TURQUOISE = '#00FFE0';
-export const LIGHT_BLUE = '#008aff';
+const BLUE = "#0066FF";
+const TURQUOISE = "#00FFE0";
+const LIGHT_BLUE = "#008aff";
+const DARK_THEME_BG = "#04084b";
+
+export { BLUE, TURQUOISE, LIGHT_BLUE, DARK_THEME_BG };

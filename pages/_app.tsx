@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
+import { ContextProvider } from "context/context";
 
 import { GlobalStyle } from "../styles/GlobalStyle";
 
@@ -14,7 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <ContextProvider>
+        <Component {...pageProps} />
+      </ContextProvider>
     </>
   );
 }

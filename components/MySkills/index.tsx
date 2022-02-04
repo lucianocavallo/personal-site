@@ -1,4 +1,6 @@
-import { Container, Grid, SkillsDiv } from "./styles";
+import { useContext } from "react";
+import { Context } from "context/context";
+
 import Image from "next/image";
 import htmlImg from "@/images/techs/html.svg";
 import cssImg from "@/images/techs/css3.svg";
@@ -13,12 +15,15 @@ import styledImg from "@/images/techs/styled.svg";
 import webpackImg from "@/images/techs/webpack.svg";
 import typescriptImg from "@/images/techs/typescript.svg";
 
+import { Container, Grid, SkillsDiv } from "./styles";
+
 const MySkills = () => {
+  const { lang } = useContext(Context);
   return (
     <Container>
       <SkillsDiv>
         <div>
-          <h3>My Skills</h3>
+          <h3>{lang === "es" ? "Mis habilidades" : "My skills"}</h3>
         </div>
       </SkillsDiv>
       <Grid>

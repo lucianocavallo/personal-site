@@ -1,29 +1,32 @@
-import luciano from "@/images/luciano.png";
-import { Figure, StyledImage, Div, HeroContainer, Socials } from "./styles";
+import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Context } from "context/context";
 
+import luciano from "@/images/luciano.png";
 import github from "@/images/socials/github.svg";
 import instagram from "@/images/socials/instagram.svg";
 import twitter from "@/images/socials/twitter.svg";
 import linkedin from "@/images/socials/linkedin.svg";
 
+import { Figure, StyledImage, Div, HeroContainer, Socials } from "./styles";
+
 const Hero = () => {
+  const { lang } = useContext(Context);
+
   return (
     <HeroContainer>
       <div>
         <Div>
-          <h2>¡Hola Mundo!</h2>
+          <h2>{lang === "es" ? "¡Hola Mundo!" : "Hello World!"}</h2>
           <p>
-            Llevo varios meses estudiando en la carrera de Desarrollador Web en
-            Platzi. dedicandome full-time a aprender las tecnologías de HTML5,
-            CSS3, y JavaScript. Actualmente estoy especializándome en la
-            librería React.js y su framework Next.js, para construir sitios
-            geniales.
+            {lang === "es"
+              ? "Llevo varios meses estudiando en la carrera de Desarrollador Web en Platzi. Dedicandome full-time a aprender las tecnologías de HTML5, CSS3, y JavaScript. Actualmente estoy especializándome en la librería React.js y su framework Next.js, para construir sitios geniales."
+              : "I've been stufying for several months the Web Developer career in Platzi. Devoting myself full time to learn technologies as HTML5, CSS3, JavaScript and React.js. Actually I'm specializing in React.js library, and it's framework Next.js, to build awesomes websites"}
           </p>
         </Div>
         <Socials>
-          <p>Mis redes sociales</p>
+          <p>{lang === "es" ? "Mis redes sociales" : "My social networks"}</p>
           <ul>
             <li>
               <Link href="https://github.com/lucianocavallo" passHref>
