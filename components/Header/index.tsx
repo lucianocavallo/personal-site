@@ -4,6 +4,7 @@ import Image from "next/image";
 import spain from "../../public/images/flags/spain_flag_icon.png";
 import usa from "../../public/images/flags/usa_flag_icon.png";
 import { Context } from "context/context";
+import DarkModeToggle from "react-dark-mode-toggle";
 
 import { Nav, Section, Container, Li, ThemeButton, CVButton } from "./styles";
 
@@ -22,9 +23,14 @@ const Header = () => {
             <p>@lucianocavallo8</p>
           </li>
           <Li>
-            <ThemeButton themed={themed} onClick={handleToggleThemed}>
+            <DarkModeToggle
+              onChange={handleToggleThemed}
+              checked={themed}
+              size={45}
+            />
+            {/* <ThemeButton themed={themed} onClick={handleToggleThemed}>
               Theme
-            </ThemeButton>
+            </ThemeButton> */}
             <button onClick={handleToggleLang}>
               <Image
                 src={lang === "es" ? usa : spain}

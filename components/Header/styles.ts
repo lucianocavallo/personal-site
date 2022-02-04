@@ -35,6 +35,10 @@ export const Nav = styled.nav`
     margin: 15px;
     color: ${vars.BLUE};
     font-weight: bold;
+    @media (max-width: 600px) {
+      font-size: 13px;
+      margin: 5px 0 5px;
+    }
   }
 `;
 
@@ -42,6 +46,9 @@ export const Li = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
+  & button:nth-child(1) {
+    margin-right: 5px;
+  }
 `;
 
 export const ThemeButton = styled.button<ComponentProps>`
@@ -51,13 +58,17 @@ export const ThemeButton = styled.button<ComponentProps>`
 `;
 
 export const CVButton = styled.button<ComponentProps>`
-  margin: 15px;
+  margin: 15px 15px 15px 5px;
   color: ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
   font-weight: bold;
   border: 2px solid ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
   border-radius: 30px;
   padding: 5px;
   font-size: 14px;
+  @media (max-width: 600px) {
+    font-size: 13px;
+    padding: 4px 5px;
+  }
 `;
 
 export const Section = styled.section<ComponentProps>`
