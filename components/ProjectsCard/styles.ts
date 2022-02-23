@@ -38,6 +38,10 @@ export const Container = styled.div<ComponentProps>`
     margin-right: 20px;
     text-decoration: none;
     color: ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
+    transition: transform 0.2s linear;
+  }
+  & .project-link:hover {
+    transform: scale(1.1);
   }
   & > p {
     color: ${(props) => (props.themed ? "white" : "black")};
@@ -55,6 +59,10 @@ export const Container = styled.div<ComponentProps>`
   }
   & a span {
     background: ${(props) => (props.themed ? vars.LIGHT_BLUE : "transparent")};
+    transition: transform 0.2s linear;
+  }
+  & a span:hover {
+    transform: scale(1.1);
   }
   & a {
     text-decoration: none;

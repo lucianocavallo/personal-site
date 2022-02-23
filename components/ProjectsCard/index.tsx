@@ -1,7 +1,6 @@
-import Image from "next/image";
-import { Container } from "./styles";
-import github from "@/images/socials/github.svg";
-import Link from "next/link";
+import Image from 'next/image';
+import { Container } from './styles';
+import github from '@/images/socials/github.svg';
 
 const ProjectsCard = ({
   title,
@@ -20,19 +19,15 @@ const ProjectsCard = ({
       </div>
       <p>{description}</p>
       <div>
-        <Link href={url} passHref>
-          <a className="project-link">
-            {lang === "es" ? "Ver proyecto" : "Live project"}
-          </a>
-        </Link>
-        <Link href={githubLink} passHref>
-          <a>
-            <span>
-              <p>{lang === "es" ? "Ver código" : "See code"}</p>
-              <Image src={github} alt="github icon" width={32} />
-            </span>
-          </a>
-        </Link>
+        <a href={url} target="_blank" rel="noreferrer" className="project-link">
+          {lang === 'es' ? 'Ver proyecto' : 'Live project'}
+        </a>
+        <a href={githubLink} target="_blank" rel="noreferrer">
+          <span>
+            <p>{lang === 'es' ? 'Ver código' : 'See code'}</p>
+            <Image src={github} alt="github icon" width={32} />
+          </span>
+        </a>
       </div>
     </Container>
   );

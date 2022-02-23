@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import * as vars from "../../styles/vars";
-import Link from "next/link";
+import styled from 'styled-components';
+import * as vars from '../../styles/vars';
 
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components';
 
 const moveIn = keyframes`
 0% { transform: translateY(-110%); }
@@ -57,7 +56,7 @@ export const ThemeButton = styled.button<ComponentProps>`
   font-weight: bold;
 `;
 
-export const CVButton = styled.button<ComponentProps>`
+export const CVLink = styled.a<ComponentProps>`
   margin: 15px 15px 15px 5px;
   color: ${(props) => (props.themed ? vars.LIGHT_BLUE : vars.BLUE)};
   font-weight: bold;
@@ -86,8 +85,8 @@ export const Section = styled.section<ComponentProps>`
   flex-direction: column;
   ${(props) =>
     props.themed
-      ? "box-shadow: 0px 2px 12px 2px rgba(255, 255, 255, .5);"
-      : "box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);"};
+      ? 'box-shadow: 0px 2px 12px 2px rgba(255, 255, 255, .5);'
+      : 'box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);'};
   & h2 {
     font-size: 35px;
   }

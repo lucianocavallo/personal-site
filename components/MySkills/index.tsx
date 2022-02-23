@@ -1,21 +1,25 @@
-import { useContext } from "react";
-import { Context } from "context/context";
+import { useContext } from 'react';
+import { Context } from 'context/context';
 
-import Image from "next/image";
-import htmlImg from "@/images/techs/html.svg";
-import cssImg from "@/images/techs/css3.svg";
-import javascriptImg from "@/images/techs/javascript.svg";
-import linuxImg from "@/images/techs/linux.svg";
-import gitImg from "@/images/techs/git.svg";
-import reactImg from "@/images/techs/react.png";
-import nextImg from "@/images/techs/nextjs.svg";
-import npmImg from "@/images/techs/npm.svg";
-import sassImg from "@/images/techs/sass.svg";
-import styledImg from "@/images/techs/styled.svg";
-import webpackImg from "@/images/techs/webpack.svg";
-import typescriptImg from "@/images/techs/typescript.svg";
+import Image from 'next/image';
+import htmlImg from '@/images/techs/html.svg';
+import cssImg from '@/images/techs/css3.svg';
+import javascriptImg from '@/images/techs/javascript.svg';
+import linuxImg from '@/images/techs/linux.svg';
+import gitImg from '@/images/techs/git.svg';
+import reactImg from '@/images/techs/react.png';
+import nextImg from '@/images/techs/next.svg';
+import npmImg from '@/images/techs/npm.svg';
+import sassImg from '@/images/techs/sass.svg';
+import styledImg from '@/images/techs/styled.svg';
+import webpackImg from '@/images/techs/webpack.svg';
+import typescriptImg from '@/images/techs/typescript.svg';
+import nodejs from '@/images/techs/nodejs.png';
+import express from '@/images/techs/express.svg';
+import mongo from '@/images/techs/mongodb.svg';
+import graphql from '@/images/techs/graphql.svg';
 
-import { Container, Grid, SkillsDiv } from "./styles";
+import { Container, Grid, SkillsDiv } from './styles';
 
 const MySkills = () => {
   const { lang, themed } = useContext(Context);
@@ -23,7 +27,7 @@ const MySkills = () => {
     <Container>
       <SkillsDiv themed={themed}>
         <div>
-          <h3>{lang === "es" ? "Mis habilidades" : "My skills"}</h3>
+          <h3>{lang === 'es' ? 'Mis habilidades' : 'My skills'}</h3>
         </div>
       </SkillsDiv>
       <Grid>
@@ -103,7 +107,7 @@ const MySkills = () => {
         </li>
         <li>
           <figure>
-            <Image src={webpackImg} alt="Webpack" width={80} height={80} />
+            <Image src={webpackImg} alt="Webpack" width={69} height={80} />
           </figure>
           <p>Webpack</p>
         </li>
@@ -112,6 +116,30 @@ const MySkills = () => {
             <Image src={npmImg} alt="NPM" layout="responsive" />
           </figure>
           <p>NPM</p>
+        </li>
+        <li>
+          <figure>
+            <Image src={nodejs} alt="Nodejs" width={69} height={80} />
+          </figure>
+          <p>Nodejs</p>
+        </li>
+        <li>
+          <figure>
+            <Image src={express} alt="Express" width={80} height={80} />
+          </figure>
+          <p>Express</p>
+        </li>
+        <li>
+          <figure>
+            <Image src={mongo} alt="MongoDB" width={69} height={80} />
+          </figure>
+          <p>MongoDB</p>
+        </li>
+        <li>
+          <figure>
+            <Image src={graphql} alt="GraphQL" width={69} height={80} />
+          </figure>
+          <p>GraphQL</p>
         </li>
       </Grid>
     </Container>

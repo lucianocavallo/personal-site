@@ -1,14 +1,15 @@
-import { useContext } from "react";
-import { Context } from "context/context";
+import { useContext } from 'react';
+import { Context } from 'context/context';
 
-import ProjectsCard from "../ProjectsCard";
+import ProjectsCard from '../ProjectsCard';
 
-import simon from "@/images/projects/mini-simon-says.png";
-import weather from "@/images/projects/mini-weather-app.png";
-import petgram from "@/images/projects/mini-petgram.png";
-import freeMarket from "@/images/projects/free-market.png";
+import simon from '@/images/projects/mini-simon-says.png';
+import weather from '@/images/projects/mini-weather-app.png';
+import petgram from '@/images/projects/mini-petgram.png';
+import freeMarket from '@/images/projects/free-market.png';
+import flyPost from '@/images/projects/fly-post.png';
 
-import { Container, Grid, MyProjects } from "./styles";
+import { Container, Grid, MyProjects } from './styles';
 
 const Projects = () => {
   const { lang, themed } = useContext(Context);
@@ -16,11 +17,11 @@ const Projects = () => {
     <Container>
       <MyProjects themed={themed}>
         <div>
-          <h3>{lang === "es" ? "Mis Proyectos" : "My Projects"}</h3>
+          <h3>{lang === 'es' ? 'Mis Proyectos' : 'My Projects'}</h3>
         </div>
       </MyProjects>
       <Grid>
-        {lang === "es"
+        {lang === 'es'
           ? projectsEs.map((project) => (
               <ProjectsCard
                 title={project.title}
@@ -54,69 +55,85 @@ export default Projects;
 
 const projectsEs = [
   {
-    title: "Free Market",
-    url: "https://free-market-lucianocavallo.netlify.app/",
-    github: "https://github.com/lucianocavallo/free-market-frontend",
+    title: 'Fly Post - micro-twitter',
+    url: 'https://fly-post.netlify.app/',
+    github: 'https://github.com/lucianocavallo/fly-post-frontend',
+    image: flyPost,
+    description:
+      'Esta aplicación es un mini clon de twitter, utilizando una backend API construída con Node.js, Express, Apollo-Server y GraphQL',
+  },
+  {
+    title: 'Free Market',
+    url: 'https://free-market-lucianocavallo.netlify.app/',
+    github: 'https://github.com/lucianocavallo/free-market-frontend',
     image: freeMarket,
     description:
-      "Esta aplicación emula una e-commerce real, conectandosé a un backend de Node.js y MondoDB",
+      'Esta aplicación emula una e-commerce real, conectandose a un backend de Node.js y MondoDB',
   },
   {
-    title: "Weather App",
-    url: "https://weather-app-lucianocavallo.netlify.app/",
-    github: "https://github.com/lucianocavallo/weather-app",
+    title: 'Weather App',
+    url: 'https://weather-app-lucianocavallo.netlify.app/',
+    github: 'https://github.com/lucianocavallo/weather-app',
     image: weather,
     description:
-      "Aplicacion de clima que se conecta a una API externa, creada con React.js ⛅",
+      'Aplicacion de clima que se conecta a una API externa, creada con React.js ⛅',
   },
   {
-    title: "Petgram",
-    url: "https://petgram-lucianocavallo.vercel.app/",
-    github: "/",
+    title: 'Petgram',
+    url: 'https://petgram-lucianocavallo.vercel.app/',
+    github: '/',
     image: petgram,
     description:
-      "Aplicacion que emula a Instagram pero de mascotas, construido con React.js. 🐶",
+      'Aplicacion que emula a Instagram pero de mascotas, construido con React.js. 🐶',
   },
   {
-    title: "Simon Says",
-    url: "https://simon-says-lucianocavallo.netlify.app/",
-    github: "https://github.com/lucianocavallo/simon-says",
+    title: 'Simon Says',
+    url: 'https://simon-says-lucianocavallo.netlify.app/',
+    github: 'https://github.com/lucianocavallo/simon-says',
     image: simon,
     description:
-      "Clásico juego de memoria visual y auditiva creado con React.js",
+      'Clásico juego de memoria visual y auditiva creado con React.js',
   },
 ];
 
 const projectsEn = [
   {
-    title: "Free Market",
-    url: "https://free-market-lucianocavallo.netlify.app/",
-    github: "https://github.com/lucianocavallo/free-market-frontend",
+    title: 'Fly Post - micro-twitter',
+    url: 'https://fly-post.netlify.app/',
+    github: 'https://github.com/lucianocavallo/fly-post-frontend',
+    image: flyPost,
+    description:
+      "This aplication it's twitter mini clon, using a backend API build with Node.js, Express, Apollo-Server and GraphQL",
+  },
+  {
+    title: 'Free Market',
+    url: 'https://free-market-lucianocavallo.netlify.app/',
+    github: 'https://github.com/lucianocavallo/free-market-frontend',
     image: freeMarket,
     description:
-      "This application emulates a real e-commerce, connecting to my backed built with Node.js, Express and MongoDB",
+      'This application emulates a real e-commerce, connecting to my backed built with Node.js, Express and MongoDB',
   },
   {
-    title: "Weather App",
-    url: "https://weather-app-lucianocavallo.netlify.app/",
-    github: "https://github.com/lucianocavallo/weather-app",
+    title: 'Weather App',
+    url: 'https://weather-app-lucianocavallo.netlify.app/',
+    github: 'https://github.com/lucianocavallo/weather-app',
     image: weather,
     description:
-      "Weather app that connects with an external API, built with React.js ⛅",
+      'Weather app that connects with an external API, built with React.js ⛅',
   },
   {
-    title: "Petgram",
-    url: "https://petgram-lucianocavallo.vercel.app/",
-    github: "/",
+    title: 'Petgram',
+    url: 'https://petgram-lucianocavallo.vercel.app/',
+    github: '/',
     image: petgram,
     description:
-      "Application that emulates Instagram but of pets, built with React.js 🐶",
+      'Application that emulates Instagram but of pets, built with React.js 🐶',
   },
   {
-    title: "Simon Says",
-    url: "https://simon-says-lucianocavallo.netlify.app/",
-    github: "https://github.com/lucianocavallo/simon-says",
+    title: 'Simon Says',
+    url: 'https://simon-says-lucianocavallo.netlify.app/',
+    github: 'https://github.com/lucianocavallo/simon-says',
     image: simon,
-    description: "Classic visual and auditive game, built with React.js",
+    description: 'Classic visual and auditive game, built with React.js',
   },
 ];

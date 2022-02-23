@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import spain from "../../public/images/flags/spain_flag_icon.png";
-import usa from "../../public/images/flags/usa_flag_icon.png";
-import { Context } from "context/context";
-import DarkModeToggle from "react-dark-mode-toggle";
+import React, { useContext } from 'react';
+import Image from 'next/image';
+import spain from '../../public/images/flags/spain_flag_icon.png';
+import usa from '../../public/images/flags/usa_flag_icon.png';
+import { Context } from 'context/context';
+import DarkModeToggle from 'react-dark-mode-toggle';
 
-import { Nav, Section, Container, Li, ThemeButton, CVButton } from "./styles";
+import { Nav, Section, Container, Li, CVLink } from './styles';
 
 const Header = () => {
   const { lang, toggleLang, themed, toggleThemed } = useContext(Context);
@@ -28,29 +27,35 @@ const Header = () => {
               checked={themed}
               size={45}
             />
-            {/* <ThemeButton themed={themed} onClick={handleToggleThemed}>
-              Theme
-            </ThemeButton> */}
             <button onClick={handleToggleLang}>
               <Image
-                src={lang === "es" ? usa : spain}
+                src={lang === 'es' ? usa : spain}
                 alt="language flag"
                 width={22}
                 height={22}
               />
             </button>
-            <CVButton themed={themed}>
-              {lang === "es" ? "Descargar CV" : "Download CV"}
-            </CVButton>
+            <CVLink
+              themed={themed}
+              href={
+                lang === 'es'
+                  ? 'https://res.cloudinary.com/lucianocavallo/image/upload/v1645582342/CV/luciano_cavallo_esp_ecara6.png'
+                  : 'https://res.cloudinary.com/lucianocavallo/image/upload/v1645582342/CV/luciano_cavallo_eng_hfznlk.png'
+              }
+              target="_blank"
+              rel="noreferrer"
+            >
+              {lang === 'es' ? 'Descargar CV' : 'Download CV'}
+            </CVLink>
           </Li>
         </ul>
       </Nav>
       <Section themed={themed}>
         <h2>Luciano Cavallo</h2>
-        <h3>Frontend Developer</h3>
+        <h3>Fullstack Developer</h3>
         <p>
-          {lang === "es"
-            ? "Me apasiona la tecnología, el código, y me motivan los proyectos desafiantes."
+          {lang === 'es'
+            ? 'Me apasiona la tecnología, el código, y me motivan los proyectos desafiantes.'
             : "I'm passionate about technology, coding, and looking forward for challenging projects"}
         </p>
       </Section>

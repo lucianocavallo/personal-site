@@ -35,7 +35,7 @@ export const MyProjects = styled.div<ComponentProps>`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 300px 300px;
-  place-items: center;
+  place-items: start center;
   gap: 40px;
   @media (max-width: 800px) {
     grid-template-columns: 300px;
