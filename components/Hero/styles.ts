@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import Image from "next/image";
-import { BLUE, TURQUOISE } from "../../styles/vars";
-import * as vars from "../../styles/vars";
+import styled from 'styled-components';
+import Image from 'next/image';
+import { BLUE, TURQUOISE } from '../../styles/vars';
+import * as vars from '../../styles/vars';
 
-import { keyframes } from "styled-components";
+import { keyframes } from 'styled-components';
 
 const heroMoveIn = keyframes`
 0% { opacity: 0; }
@@ -33,7 +33,7 @@ export const Div = styled.div<ComponentProps>`
 
   & > p {
     line-height: 22px;
-    color: ${(props) => (props.themed ? "white" : "black")};
+    color: ${(props) => (props.themed ? 'white' : 'black')};
   }
 
   & h2 {
@@ -58,7 +58,7 @@ export const Socials = styled.div<ComponentProps>`
   flex-direction: column;
   align-items: center;
   & p {
-    color: ${(props) => (props.themed ? "white" : "black")};
+    color: ${(props) => (props.themed ? 'white' : 'black')};
   }
   & ul {
     list-style: none;
@@ -78,14 +78,13 @@ export const Figure = styled.figure`
   align-self: flex-start;
   display: flex;
   justify-content: center;
-  min-width: 230px;
-  height: 230px;
+  min-width: 250px;
+  height: 250px;
   border-radius: 50%;
-  overflow: hidden;
-  background: radial-gradient(${TURQUOISE}, ${BLUE});
+  /* background: radial-gradient(${TURQUOISE}, ${BLUE}); */
+  box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
   flex-grow: 1;
-  box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyledImage = styled(Image)`

@@ -72,7 +72,7 @@ const Hero = () => {
           className="image"
           src={luciano}
           alt="Luciano's picture"
-          width={200}
+          width={250}
           height={250}
         />
       </Figure>
