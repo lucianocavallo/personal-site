@@ -39,8 +39,8 @@ const Header = () => {
               themed={themed}
               href={
                 lang === 'es'
-                  ? 'https://drive.google.com/file/d/1tg7H-4Zhf8utSTzL66q5Tf24dA8YMVch/view?usp=sharing'
-                  : 'https://drive.google.com/file/d/1z0i8ACuhUPwpkLXu_rekSmZGm3XkgEqE/view?usp=sharing'
+                  ? 'https://res.cloudinary.com/lucianocavallo/image/upload/v1645833622/CV/lucianocavalloesp_uhmxrm.png'
+                  : 'https://res.cloudinary.com/lucianocavallo/image/upload/v1645833622/CV/lucianocavalloen_jwhf56.png'
               }
               target="_blank"
               rel="noreferrer"
