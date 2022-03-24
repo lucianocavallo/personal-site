@@ -60,7 +60,7 @@ const projectsEs = [
     github: 'https://github.com/lucianocavallo/fly-post-frontend',
     image: flyPost,
     description:
-      'Esta aplicación es un mini clon de twitter, utilizando una backend API construída con Node.js, Express, Apollo-Server y GraphQL',
+      'Esta aplicación es un mini clon de twitter, conectada a un backend (API) construída con Node.js, Express, Apollo-Server y GraphQL.',
   },
   {
     title: 'Free Market',
@@ -68,7 +68,7 @@ const projectsEs = [
     github: 'https://github.com/lucianocavallo/free-market-frontend',
     image: freeMarket,
     description:
-      'Esta aplicación emula una e-commerce real, conectandose a un backend de Node.js y MondoDB',
+      'Esta aplicación es un mini clon de una e-commerce real, que se conecta a un backend construído con Node.js, Express y MongoDB.',
   },
   {
     title: 'Weather App',
@@ -76,7 +76,7 @@ const projectsEs = [
     github: 'https://github.com/lucianocavallo/weather-app',
     image: weather,
     description:
-      'Aplicacion de clima que se conecta a una API externa, creada con React.js ⛅',
+      'Aplicación de clima que se conecta a una API externa, creada con React.js. ⛅',
   },
   {
     title: 'Petgram',
@@ -84,7 +84,7 @@ const projectsEs = [
     github: '/',
     image: petgram,
     description:
-      'Aplicacion que emula a Instagram pero de mascotas, construido con React.js. 🐶',
+      'Aplicación que emula a Instagram pero de mascotas, construído con React.js. 🐶',
   },
   {
     title: 'Simon Says',
@@ -92,7 +92,7 @@ const projectsEs = [
     github: 'https://github.com/lucianocavallo/simon-says',
     image: simon,
     description:
-      'Clásico juego de memoria visual y auditiva creado con React.js',
+      'Clásico juego de memoria visual y auditiva creado con React.js.',
   },
 ];
 
@@ -103,7 +103,7 @@ const projectsEn = [
     github: 'https://github.com/lucianocavallo/fly-post-frontend',
     image: flyPost,
     description:
-      "This aplication it's twitter mini clon, using a backend API build with Node.js, Express, Apollo-Server and GraphQL",
+      "This aplication it's twitter mini clon, using a backend API build with Node.js, Express, Apollo-Server and GraphQL.",
   },
   {
     title: 'Free Market',
@@ -111,7 +111,7 @@ const projectsEn = [
     github: 'https://github.com/lucianocavallo/free-market-frontend',
     image: freeMarket,
     description:
-      'This application emulates a real e-commerce, connecting to my backed built with Node.js, Express and MongoDB',
+      'This application emulates a real e-commerce, connecting to a backend API, built with Node.js, Express and MongoDB.',
   },
   {
     title: 'Weather App',
@@ -119,7 +119,7 @@ const projectsEn = [
     github: 'https://github.com/lucianocavallo/weather-app',
     image: weather,
     description:
-      'Weather app that connects with an external API, built with React.js ⛅',
+      'A weather app that connects with an external API, built with React.js. ⛅',
   },
   {
     title: 'Petgram',
@@ -127,13 +127,13 @@ const projectsEn = [
     github: '/',
     image: petgram,
     description:
-      'Application that emulates Instagram but of pets, built with React.js 🐶',
+      'Application that emulates Instagram but with pets, built with React.js. 🐶',
   },
   {
     title: 'Simon Says',
     url: 'https://simon-says-lucianocavallo.netlify.app/',
     github: 'https://github.com/lucianocavallo/simon-says',
     image: simon,
-    description: 'Classic visual and auditive game, built with React.js',
+    description: 'Classic visual and auditive game, built with React.js.',
   },
 ];

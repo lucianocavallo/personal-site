@@ -8,6 +8,7 @@ import javascriptImg from '@/images/techs/javascript.svg';
 import linuxImg from '@/images/techs/linux.svg';
 import gitImg from '@/images/techs/git.svg';
 import reactImg from '@/images/techs/react.png';
+import reduxImg from '@/images/techs/redux.svg';
 import nextImg from '@/images/techs/next.svg';
 import npmImg from '@/images/techs/npm.svg';
 import sassImg from '@/images/techs/sass.svg';
@@ -57,6 +58,12 @@ const MySkills = () => {
         <li>
           <figure>
             <Image src={reactImg} alt="React.js" layout="responsive" />
+          </figure>
+          <p>React.js</p>
+        </li>
+        <li>
+          <figure>
+            <Image src={reduxImg} alt="Redux" layout="responsive" />
           </figure>
           <p>React.js</p>
         </li>

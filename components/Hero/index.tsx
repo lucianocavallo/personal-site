@@ -1,11 +1,9 @@
 import { useContext } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Context } from 'context/context';
 
 import luciano from '@/images/luciano.png';
 import github from '@/images/socials/github.svg';
-import instagram from '@/images/socials/instagram.svg';
 import twitter from '@/images/socials/twitter.svg';
 import linkedin from '@/images/socials/linkedin.svg';
 
@@ -53,15 +51,6 @@ const Hero = () => {
                 rel="noreferrer"
               >
                 <Image src={linkedin} alt="linkedin" width={35} height={35} />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/lucianocavallo10/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image src={instagram} alt="instagram" width={35} height={35} />
               </a>
             </li>
           </ul>

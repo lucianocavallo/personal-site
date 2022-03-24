@@ -24,7 +24,7 @@ const ProjectsCard = ({
         </a>
         <a href={githubLink} target="_blank" rel="noreferrer">
           <span>
-            <p>{lang === 'es' ? 'Ver código' : 'See code'}</p>
+            <p>{lang === 'es' ? 'Ir al código' : 'Go to code'}</p>
             <Image src={github} alt="github icon" width={32} />
           </span>
         </a>
