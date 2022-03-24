@@ -65,7 +65,7 @@ const MySkills = () => {
           <figure>
             <Image src={reduxImg} alt="Redux" layout="responsive" />
           </figure>
-          <p>React.js</p>
+          <p>Redux</p>
         </li>
         <li>
           <figure>
